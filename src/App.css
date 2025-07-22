@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 0 16px;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 20px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+.note {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  margin: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease forwards;
+  float: left;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.note h1 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.note p {
+  font-size: 1rem;
+  color: #555;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  float: right;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.note button:hover {
+  transform: scale(1.1);
+}
+
+form {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff5e62;
+  outline: none;
+}
+
+form button {
+  position: absolute;
+  right: 20px;
+  bottom: -18px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .note {
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  form {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
